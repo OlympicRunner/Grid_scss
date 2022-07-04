@@ -1,0 +1,516 @@
+@import 'common.scss';
+@import 'grid.scss';
+@import 'mixin.scss';
+@import 'variables.scss';
+
+body {
+    .header {
+        margin-bottom: 115px;
+        background-color: #202020;
+        .header__container {
+            align-items: center;
+            @include container;
+            grid-column-gap: 7%;
+            .header__menu {
+                .menu__link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: white;
+                }
+            }
+            .header__menu {
+                padding-left: 40px;
+            }
+            .header__search {
+                display: none;
+                transition: .15s opacity ease-in-out;
+            }
+            .header__burger {
+                display: none;
+            }
+            .header-form {
+                display: none;
+                
+            }
+        }
+    }
+    .burger {
+        display: none;
+    }
+    .portf {
+        .portf__container {
+            @include container;
+            margin-bottom: 68px;
+            .portf__left {
+                position: relative;
+                picture {
+                    img {
+                        @include hw-100;
+                    }
+                }
+                .portf__teg {
+                    position: absolute;
+                    padding: 7px 14px;
+                    background-color: #333333;
+                    color: white;
+                    top: 15px;
+                    right: 15px;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16.41px;
+                }
+                .portf__h {
+                    position: absolute;
+                    left: 58px;
+                    bottom: 60px;
+                    right: 60px;
+                    span{
+                        margin-bottom: 3px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: white;
+                    }
+                    .portf__h1 {
+                        margin-bottom: 19px;
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 104%;
+                        color: white;
+                    }
+                    .portf__btn {
+                        padding: 15.5px 22px;
+                        background-color: #FF6E30;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: white;
+                    }
+                }
+            }
+            .portf__content-1 {
+                .portf__h2 {
+                    margin-bottom: 25px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 24.95px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .portf__content-2 {
+                img {
+                    @include hw-100;
+                }
+            }
+            .portf__content-3 {
+                img {
+                    @include hw-100;
+                }
+            }
+        }
+    }
+    .about {
+        background-color: #202020;
+        .about__container {
+            @include container;
+            padding-top: 30px;
+            padding-bottom: 70px;
+            .about__text {
+                .about__h2 {
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: white;
+                }
+                .about__p {
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #CACACA
+                }
+            }
+            .about__more {
+                padding-top: 33px;
+                .about__img {
+                    margin-bottom: 25px;
+                }
+                .about__h3 {
+                    margin-bottom: 16px;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 22px;
+                    color: white;
+                }
+                .about__form {
+                    display: flex;
+                    justify-content: space-between;
+                    .about__input {
+                        height: 50px;
+                        width: 75%;
+                        border: none;
+                        background-color: #4A4A4A;
+                        &::placeholder {
+                            padding-left: 20px;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #CACACA;
+                        }
+                    }
+                    // .about__input + div.js-validate-error-label {
+                    //     background-image: url(../img/NuN.png);
+                    //     background-repeat: no-repeat;
+                    //     background-position-x: right;
+                    //     width: 125px;
+                    //     height: 12px;
+                    //     margin-left: 10px;
+                    //     top: 295px;
+                    //   }
+                    .about__btn {
+                        padding: 15.5px 22px;
+                        margin-left: 30px;
+                        background-color: #FF6E30;
+                        font-family: sans-serif;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .projects {
+        .projects__container {
+            @include container;
+            .projects__h2 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 31px;
+            }
+            .projects__grid {
+                .projects__1 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    picture {
+                        img {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__text {
+                        @include projects__p;
+                    }
+                    .projects__date {
+                        @include projects__date;
+                    }
+                }
+                .projects__2 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    picture {
+                        img {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__text {
+                        @include projects__p;
+                    }
+                    .projects__date {
+                        @include projects__date;
+                    }
+                }
+                .projects__3 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    picture {
+                        img {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__text {
+                        @include projects__p;
+                    }
+                    .projects__date {
+                        @include projects__date;
+                    }
+                }
+                .projects__4 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__about {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        bottom: 37px;
+                        .projects__date-two {
+                            margin-bottom: 2px;
+                            padding-left: 16.84px;
+                            background-image: url(../img/svg/projects__data-two.svg);
+                            background-repeat: no-repeat;
+                            background-position: left;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 22px;
+                            color: white;
+                        }
+                        .projects__h3 {
+                            margin-bottom: 6px;
+                            max-width: 293px;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 24px;
+                            color: white;
+                        }
+                        .projects__what {
+                            max-width: 288px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: white;
+                        }
+                        .projects__btn {
+                            position: absolute;
+                            padding: 15px 22px;
+                            bottom: 0;
+                            border: 3px solid #FF6E30;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: white;
+                        }
+                    }
+                }
+                .projects__5 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__about {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        bottom: 37px;
+                        .projects__date-two {
+                            margin-bottom: 2px;
+                            padding-left: 16.84px;
+                            background-image: url(../img/svg/projects__data-two.svg);
+                            background-repeat: no-repeat;
+                            background-position: left;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 22px;
+                            color: white;
+                        }
+                        .projects__h3 {
+                            margin-bottom: 6px;
+                            max-width: 293px;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 24px;
+                            color: white;
+                        }
+                        .projects__what {
+                            max-width: 288px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: white;
+                        }
+                        .projects__btn {
+                            position: absolute;
+                            padding: 15px 22px;
+                            bottom: 0;
+                            border: 3px solid #FF6E30;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: white;
+                        }
+                    }
+                }
+                .projects__6 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    picture {
+                        img {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__text {
+                        @include projects__p;
+                    }
+                    .projects__date {
+                        @include projects__date;
+                    }
+                }
+                .projects__7 {
+                    position: relative;
+                    top: 5px;
+                    right: 5px;
+                    picture {
+                        img {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .projects__teg {
+                        @include teg;
+                    }
+                    .projects__text {
+                        @include projects__p;
+                    }
+                    .projects__date {
+                        @include projects__date;
+                    }
+                }
+            }
+        }
+    }
+    .contacts {
+        .contacts__container {
+            @include container;
+            .contacts__h2 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 31px;
+            }
+            .contacts__grid {
+                .contacts__map {
+                    position: relative;
+                    padding-top: 20px;
+                    iframe {
+                        width: 100%;
+                    }
+                    .contacts__connect {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        width: 410px;
+                        top: 20px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba(32, 32, 32, 0.85);
+                        .contacts__more {
+                            padding-left: 60px;
+                            padding-right: 50px;
+                            .contacts__name {
+                                margin-bottom: 5px;
+                                font-weight: 400;
+                                font-size: 24px;
+                                line-height: 22px;
+                                color: white;
+                            }
+                            .contacts__adress {
+                                margin-bottom: 3px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 28px;
+                                color: #CACACA;
+                            }
+                            .contacts__tell {
+                                display: flex;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 21px;
+                                color: white;
+                            }
+                        }
+                        .contacts__x {
+                            position: absolute;
+                            left: 370px;
+                            top: 20px;
+                        }
+                    }
+                }
+                .contants__request {
+                    padding-top: 16px;
+                    .contacts__h3 {
+                        margin-bottom: 5px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 22px;
+                    }
+                    .contacts__p {
+                        margin-bottom: 14px;
+                        font-family: sans-serif;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #999;
+                    }
+                    .contacts__form {
+                        display: flex;
+                        flex-direction: column;
+                        .contacts__input {
+                            padding-left: 23px;
+                            height: 45px;
+                            margin-bottom: 20px;
+                            background-color: #E9E9E9;
+                            border: 1px solid #E9E9E9;
+                        }
+                        .contacts__input::placeholder {
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #999999;
+                        }
+                        .contacts__input[name=textarea] {
+                            resize: none;
+                            padding-top: 15px;
+                            height: 130px;
+                        }
+                        .contacts__btn {
+                            width: 126px;
+                            padding: 15.5px 0;
+                            background-color: #FF6E30;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'media.scss'
