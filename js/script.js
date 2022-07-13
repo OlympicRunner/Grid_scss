@@ -20,17 +20,17 @@ document.querySelector(".header__search").addEventListener("click", function() {
 document.querySelector(".header__burger").addEventListener("click", function() {
     document.querySelector(".burger").classList.add("burger-active");
   })
-  document.querySelector(".burger__btn").addEventListener("click", function() {
-    document.querySelector(".burger").classList.remove("burger-active");
-  })
+document.querySelector(".burger__btn").addEventListener("click", function() {
+  document.querySelector(".burger").classList.remove("burger-active");
+})
 // burger
 
-  document.querySelector(".header__burger").addEventListener("click", function() {
-    document.querySelector("body").classList.add("body-burger");
-  })
-  document.querySelector(".burger__btn").addEventListener("click", function() {
-    document.querySelector("body").classList.remove("body-burger");
-  })
+document.querySelector(".header__burger").addEventListener("click", function() {
+  document.querySelector("body").classList.add("body-burger");
+})
+document.querySelector(".burger__btn").addEventListener("click", function() {
+  document.querySelector("body").classList.remove("body-burger");
+})
 
 // form 
 
@@ -44,3 +44,8 @@ new JustValidate('.about__form', {
     }
 )
 
+// map 
+
+// document.querySelector(".contacts__x").addEventListener("click", function() {
+//   document.querySelector(".contacts__connect").classList.add("contacts__connect-active");
+// })

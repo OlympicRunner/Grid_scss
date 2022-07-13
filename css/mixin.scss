@@ -20,8 +20,14 @@
 }
 
 @mixin container-320 {
-    max-width: 320px;
+    max-width: 100%;
     padding: 0 21px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+}
+@mixin container-map {
+    max-width: 100%;
+    padding: 0 0px;
     margin: 0 auto;
     margin-bottom: 68px;
 }
@@ -67,4 +73,99 @@
     line-height: 22px;
     font-family: sans-serif;
     color: #999999;
+}
+
+@mixin message {
+    outline: none;
+    svg path {
+        transition: .25s ease-in-out fill;
+    }
+    @media(min-width: 1250px) {
+        &:hover:not(:focus-visible) svg path {
+            fill: #FF6E30;
+        }
+        &:active:not(:focus-visible) svg path {
+            fill: #BC572B;
+        }
+    }
+    &:focus-visible svg path {
+        fill: #CE4307;
+    }
+}
+
+@mixin btn-more {
+    position: relative;
+    transition: .25s ease-in-out background-color;
+    &:after {
+        position: absolute;
+        content: '';
+        border: 5px solid #CE4307;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: .25s ease-in-out opacity;
+    }
+    @media(min-width: 1250px) {
+        &:hover:not(:focus-visible) {
+            background-color: #BC572B;
+        }
+        &:active:not(:focus-visible) {
+            background-color: #FF6E30;
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    &:focus-visible {
+        background-color: #CE4307;
+    }
+}
+
+@mixin btn-about {
+    transition: .25s ease-in-out background-color;
+        &:after {
+            position: absolute;
+            content: '';
+            border: 5px solid #CE4307;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+            transition: .25s ease-in-out opacity;
+        }
+    @media(min-width: 1250px) {
+        &:hover:not(:focus-visible) {
+            background-color: #FF6E30;
+        }
+        &:active:not(:focus-visible) {
+            background-color: #BC572B;
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    &:focus-visible {
+        background-color: #CE4307;
+    }
+}
+
+@mixin status-form {
+    &::placeholder {
+        transition: .25s ease-in-out color;
+    }
+    @media(min-width: 1250px) {
+        &:hover:not(:focus-visible) {
+            &::placeholder {
+                color: #FF6E30;
+            }
+        }
+        &:active:not(:focus-visible) {
+            &::placeholder {
+                color: #CACACA;
+            }
+        }
+    }
 }

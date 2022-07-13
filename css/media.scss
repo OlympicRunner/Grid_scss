@@ -136,10 +136,37 @@
                 .contacts__grid {
                     .contacts__map {
                         grid-column: span 15;
+                        .contacts__connect {
+                            height: 157px;
+                            width: 100%;
+                            top: auto;
+                            .contacts__more {
+                                padding-left: 30px;
+                            }
+                            .contacts__x {
+                                position: absolute;
+                                left: auto;
+                                right: 20px;
+                                top: 20px;
+                            }
+                        }
                     }
                     .contants__request {
                         grid-column: span 9;
                     }
+                }
+            }
+        }
+        .footer {
+            .footer__container {
+                @include container-1024;
+                margin-bottom: 0;
+                .footer__info {
+                    grid-column: span 10;
+                    grid-column-end: 20;
+                }
+                .footer__links {
+                    grid-column: span 5;
                 }
             }
         }
@@ -249,12 +276,28 @@
             .contacts__container {
                 @include container-768;
                 .contacts__grid {
+                    grid-gap: 0;
                     .contacts__map {
                         grid-column: span 24;
                     }
                     .contants__request {
-                        grid-column: span 9;
+                        padding-top: 24px;
+                        grid-column: span 16;
                     }
+                }
+            }
+        }
+        .footer {
+            .footer__container {
+                @include container-768;
+                margin-bottom: 0;
+                grid-gap: 0;
+                .footer__info {
+                    display: none;
+                }
+                .footer__links {
+                    grid-column: span 6;
+                    grid-column-end: 25;
                 }
             }
         }
@@ -425,6 +468,37 @@
                 }
             }
         }
+        .footer {
+            .footer__container {
+                padding: 0;
+                grid-template-rows: 123px 62px;
+                width: 100%;
+                .footer__links {
+                    grid-column: span 24;
+                    text-align: center;
+                }
+                .footer__logo {
+                    z-index: 3;
+                    text-align: center;
+                    grid-column:span 24;
+                    grid-row-end: 3;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background-color: #4A4A4A;
+                        top: -14px;
+                        right: 0;
+                        left: 0;
+                        bottom: -13px;
+                        z-index: -1;
+                    }
+                    .footer__text {
+                        font-size: 10px;
+                        line-height: 12.9px;
+                    }
+                }
+            }
+        }
     }
     .body-burger {
         position: fixed;
@@ -519,5 +593,31 @@
                 @include container-320;
             }
         }
+        .contacts {
+            .contacts__container {
+                @include container-map;
+                .contacts__grid {
+                    .contacts__map {
+                       .contacts__connect {
+                            .contacts__more {
+                                padding-left: 19px;
+                                padding-right: 3px;
+                            }
+                        }
+                    }
+                    .contants__request {
+                        grid-column: span 24;
+                        max-width: 100%;
+                        padding: 23px 21px 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        // .footer {
+        //     .footer__container {
+        //         padding: 0;
+        //     }
+        // }
     }
 }
