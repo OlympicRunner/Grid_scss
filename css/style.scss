@@ -33,20 +33,7 @@ body {
                         z-index: -1;
                         opacity: 0;
                     }
-                    @media(min-width: 1250px) {
-                        &:hover:not(:focus-visible) {
-                            color: #FF6E30;
-                        }
-                        &:active:not(:focus-visible) {
-                            color: #fff;
-                            &::after {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                    &:focus-visible {
-                        color: #CE4307;
-                    }
+                    @include a-link;
                 }
             }
             .messager {
@@ -62,8 +49,7 @@ body {
                 display: none;
             }
             .header-form {
-                display: none;
-                
+                display: none;   
             }
         }
     }
@@ -181,6 +167,7 @@ body {
                     color: white;
                 }
                 .about__form {
+                    position: relative;
                     display: flex;
                     justify-content: space-between;
                     .about__input {
@@ -201,6 +188,21 @@ body {
                             color: #CACACA;
                         }
                         @include status-form;
+                    }
+                    .js-validate-error-label {
+                        position: absolute;
+                        background-image: url(../img/validate-error.png);
+                        background-repeat: no-repeat;
+                        background-position-x: right;
+                        width: 88px;
+                        padding-left: 30px;
+                        height: 12px;
+                        top: 4px;
+                    }
+                    .js-validate-error-field {
+                        color: #CACACA !important;
+                        outline: 1px solid #F06666;
+                        border: none !important;
                     }
                     .about__btn {
                         padding: 15.5px 22px;
@@ -471,6 +473,7 @@ body {
                         bottom: 0;
                         left: 0;
                         background-color: rgba(32, 32, 32, 0.85);
+                        transition: .2s width ease-in-out;
                         .contacts__more {
                             padding-left: 60px;
                             padding-right: 50px;
@@ -539,10 +542,41 @@ body {
                             position: absolute;
                             left: 370px;
                             top: 20px;
+                            opacity: 1;
+                            transition: .5s all ease-in-out;
+                        }
+                        .contacts__o {
+                            visibility: hidden;
+                            position: absolute;
+                            left: 20px;
+                            top: 20px;
+                            opacity: 0;
+                            transform: translateX(0);
+                            transition: .25s all ease-in-out;
+                            svg {
+                                transform: rotate(45deg);
+                            }
                         }
                     }
-                    .contacts__connect-active {
-                        visibility: hidden;
+                    @media (min-width: 1250px) {
+                        .contacts__connect-active {
+                            width: 60px;
+                            .contacts__more {
+                                display: none;
+                            }
+                            .contacts__x {
+                                visibility: hidden;
+                                opacity: 0;
+                                transform: translateX(-400px);
+                            }
+                            .contacts__o {
+                                visibility: visible;
+                                position: absolute;
+                                left: 20px;
+                                top: 20px;
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
                 .contants__request {
@@ -564,41 +598,62 @@ body {
                     .contacts__form {
                         display: flex;
                         flex-direction: column;
-                        .contacts__input {
-                            padding-left: 23px;
-                            height: 45px;
-                            margin-bottom: 20px;
-                            background-color: #E9E9E9;
-                            border: 1px solid #E9E9E9;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 19px;
-                            color: white;
-                            &::placeholder {
-                                font-family: sans-serif;
+                        .contacts__box-input {
+                            position: relative;
+                            .contacts__input {
+                                width: -webkit-fill-available;
+                                padding-left: 23px;
+                                height: 45px;
+                                margin-bottom: 20px;
+                                background-color: #E9E9E9;
+                                border: 1px solid #E9E9E9;
                                 font-weight: 400;
                                 font-size: 16px;
                                 line-height: 19px;
-                                color: #999999;
+                                color: #202020;
+                                transition: .25s all ease-in-out;
+                                &::placeholder {
+                                    font-family: sans-serif;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                    color: #999999;
+                                }
+                                @include status-form;
                             }
-                            @include status-form;
+                            .contacts__input[name=textarea] {
+                                resize: none;
+                                padding-top: 15px;
+                                height: 130px;
+                            }
+                            .js-validate-error-label {
+                                position: absolute;
+                                background-image: url(../img/validate-error.png);
+                                background-repeat: no-repeat;
+                                background-position-x: right;
+                                width: 88px;
+                                padding-left: 30px;
+                                height: 12px;
+                                top: 4px;
+                                color: rgba(255, 255, 255, 0.0)!important;
+                            }
+                            .js-validate-error-field {
+                                color: #CACACA !important;
+                                outline: 1px solid #F06666;
+                                border: none !important;
+                            }
                         }
-                        .contacts__input[name=textarea] {
-                            resize: none;
-                            padding-top: 15px;
-                            height: 130px;
-                        }
-                        .contacts__btn {
-                            width: 126px;
-                            padding: 15.5px 0;
-                            background-color: #FF6E30;
-                            font-family: sans-serif;
-                            font-weight: 700;
-                            font-size: 16px;
-                            line-height: 19px;
-                            color: white;
-                            @include btn-more;
-                        }
+                            .contacts__btn {
+                                width: 126px;
+                                padding: 15.5px 0;
+                                background-color: #FF6E30;
+                                font-family: sans-serif;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: white;
+                                @include btn-more;
+                            }
                     }
                 }
             }

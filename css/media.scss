@@ -20,6 +20,10 @@
                     display: block;
                     transform: translateY(0);
                     transition: .2s all ease-in-out;
+                    svg {
+                        transform: scale(0.9);
+                    }
+                    @include message;
                 }
                 .active {
                     opacity: 0;
@@ -48,6 +52,11 @@
                         font-size: 14px;
                         line-height: 18px;
                         color: white;
+                        outline: none;
+                        transition: .25s border ease-in-out;
+                        &:focus-visible {
+                            border-bottom: 1px solid #CE4307;
+                        }
                         &::placeholder {
                             font-weight: 400;
                             font-size: 14px;
@@ -140,6 +149,7 @@
                             height: 157px;
                             width: 100%;
                             top: auto;
+                            transition: .25s height ease-in-out;
                             .contacts__more {
                                 padding-left: 30px;
                             }
@@ -148,6 +158,23 @@
                                 left: auto;
                                 right: 20px;
                                 top: 20px;
+                            }
+                        }
+                        .contacts__connect-active {
+                            height: 60px;
+                            .contacts__more {
+                                display: none;
+                            }
+                            .contacts__x {
+                                visibility: hidden;
+                            }
+                            .contacts__o {
+                                visibility: visible;
+                                position: absolute;
+                                left: auto;
+                                right: 20px;
+                                top: 20px;
+                                opacity: 1;
                             }
                         }
                     }
@@ -192,6 +219,17 @@
                 }
                 .hedaer__search {
                     grid-area: h-search;
+                }
+                .header-form {
+                    transform: translateY(-100px);
+                    .header-form__input {
+                        width: 317px;
+                    }
+                }
+                .header-form__active {
+                    transform: translateY(-25px);
+                    opacity: 1;
+                    z-index: 5;
                 }
             }
             &:after {
@@ -336,13 +374,9 @@
                 .header__burger {
                     z-index: 2;
                 }
-                .header__search {
-                    svg {
-                        transform: scale(0.9);
-                    }
-                }
                 .header-form {
-                    top: 25px;
+                    width: 278px;
+                    top: 50px;
                     right: 21px;
                 }
             }
@@ -363,10 +397,9 @@
             bottom: 0;
             z-index: -10;
             opacity: 0;
-            // @include container-768;
             .burger__btn {
                 margin-bottom: 20px;
-                
+                @include burger__btn;
             }
             .burger__item {
                 margin-bottom: 30px;
@@ -374,6 +407,8 @@
                 font-style: 16px;
                 line-height: 20.6px;
                 color: white;
+                outline: none;
+                @include a-link;
             }
             .buger__contact {
                 position: fixed;

@@ -93,6 +93,23 @@
     }
 }
 
+@mixin a-link {
+    @media(min-width: 1250px) {
+        &:hover:not(:focus-visible) {
+            color: #FF6E30;
+        }
+        &:active:not(:focus-visible) {
+            color: #fff;
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    &:focus-visible {
+        color: #CE4307;
+    }
+}
+
 @mixin btn-more {
     position: relative;
     transition: .25s ease-in-out background-color;
@@ -167,5 +184,8 @@
                 color: #CACACA;
             }
         }
+    }
+    &:focus-visible {
+        outline: 1px solid #FF6E30;
     }
 }

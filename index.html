@@ -67,14 +67,16 @@
                     <rect y="16" width="10" height="2" fill="white"/>
                 </svg>
             </button>
-            <form class="header-form" action="/">
+            <div class="header-form">
+                <input class="header-form__input" type="text" placeholder="Что будем искать?">
                 <button class="header-form__btn">
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4437 14.1875L13.232 11.4406C14.1766 10.2195 14.6875 8.72656 14.6875 7.15625C14.6875 5.27656 13.9539 3.51406 12.6273 2.18516C11.3008 0.85625 9.53359 0.125 7.65625 0.125C5.77891 0.125 4.01172 0.858594 2.68516 2.18516C1.35625 3.51172 0.625 5.27656 0.625 7.15625C0.625 9.03359 1.35859 10.8008 2.68516 12.1273C4.01172 13.4562 5.77656 14.1875 7.65625 14.1875C9.22656 14.1875 10.7172 13.6766 11.9383 12.7344L15.1499 15.4789C15.1678 15.4968 15.189 15.5109 15.2123 15.5206C15.2356 15.5303 15.2606 15.5352 15.2859 15.5352C15.3111 15.5352 15.3361 15.5303 15.3594 15.5206C15.3828 15.5109 15.4039 15.4968 15.4218 15.4789L16.4437 14.4594C16.4615 14.4415 16.4757 14.4203 16.4854 14.397C16.495 14.3737 16.5 14.3487 16.5 14.3234C16.5 14.2982 16.495 14.2732 16.4854 14.2499C16.4757 14.2265 16.4615 14.2053 16.4437 14.1875ZM11.3688 10.8688C10.375 11.8602 9.05781 12.4062 7.65625 12.4062C6.25469 12.4062 4.9375 11.8602 3.94375 10.8688C2.95234 9.875 2.40625 8.55781 2.40625 7.15625C2.40625 5.75469 2.95234 4.43516 3.94375 3.44375C4.9375 2.45234 6.25469 1.90625 7.65625 1.90625C9.05781 1.90625 10.3773 2.45 11.3688 3.44375C12.3602 4.4375 12.9062 5.75469 12.9062 7.15625C12.9062 8.55781 12.3602 9.87734 11.3688 10.8688Z" fill="white"/>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#999999"/>
+                        <rect x="7.5" y="0.5" width="12" height="1" transform="rotate(45 1.20715 0.5)" fill="white"/>
+                        <rect x="0.591431" y="15" width="12" height="1" transform="rotate(-45 0.591431 8.98535)" fill="white"/>
                     </svg>
                 </button>
-                <input class="header-form__input" type="text" placeholder="Что будем искать?">
-            </form>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -86,21 +88,21 @@
                     <rect x="5.03223" y="12.5868" width="10.8" height="0.9" transform="rotate(-45 5.03223 12.5868)" fill="white"/>
                 </svg>
             </button>
-            <span class="burger__item">
+            <a class="burger__item" href="">
                 О студии
-            </span>
-            <span class="burger__item">
+            </a>
+            <a class="burger__item" href="">
                 Наши проекты
-            </span>
-            <span class="burger__item">
+            </a>
+            <a class="burger__item" href="">
                 Услуи
-            </span>
-            <span class="burger__item">
+            </a>
+            <a class="burger__item" href="">
                 Мастер классы
-            </span>
-            <span class="burger__item">
+            </a>
+            <a class="burger__item" href="">
                 Контакты
-            </span>
+            </a>
             <span class="buger__contact">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.675 12.8167C15.65 12.8167 14.6583 12.65 13.7333 12.35C13.4417 12.25 13.1167 12.325 12.8917 12.55L11.5833 14.1917C9.225 13.0667 7.01667 10.9417 5.84167 8.5L7.46667 7.11667C7.69167 6.88333 7.75833 6.55833 7.66667 6.26667C7.35833 5.34167 7.2 4.35 7.2 3.325C7.2 2.875 6.825 2.5 6.375 2.5H3.49167C3.04167 2.5 2.5 2.7 2.5 3.325C2.5 11.0667 8.94167 17.5 16.675 17.5C17.2667 17.5 17.5 16.975 17.5 16.5167V13.6417C17.5 13.1917 17.125 12.8167 16.675 12.8167Z" fill="#FF6E30"/>
@@ -364,6 +366,13 @@
                                     <rect x="0.591431" y="15" width="12" height="1" transform="rotate(-45 0.591431 8.98535)" fill="white"/>
                                 </svg>
                             </button>
+                            <button class="contacts__o">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#999999"/>
+                                    <rect x="7.5" y="0.5" width="12" height="1" transform="rotate(45 1.20715 0.5)" fill="white"/>
+                                    <rect x="0.591431" y="15" width="12" height="1" transform="rotate(-45 0.591431 8.98535)" fill="white"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="contants__request">
@@ -374,9 +383,15 @@
                             Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
                         </p>
                         <form action="" class="contacts__form">
-                            <input class="contacts__input" type="text" name="Имя" placeholder="Имя" data-validate-field="name">
-                            <input class="contacts__input" type="email" name="email" placeholder="email" data-validate-field="email">
-                            <textarea class="contacts__input" name="textarea" id="#" cols="30" rows="10" placeholder="Комментарий" ></textarea>
+                            <div class="contacts__box-input">
+                                <input class="contacts__input" type="text" name="Имя" placeholder="Имя" data-validate-field="name">
+                            </div>
+                            <div class="contacts__box-input">
+                                <input class="contacts__input" type="email" name="email" placeholder="email" data-validate-field="email">
+                            </div>
+                            <div class="contacts__box-input">
+                                <textarea class="contacts__input" name="textarea" id="#" cols="30" rows="10" placeholder="Комментарий" ></textarea>
+                            </div>
                             <button class="contacts__btn">
                                 Отправить
                             </button>
@@ -425,8 +440,8 @@
             </div>
         </footer>
     </main>
-    <script src="just-validate.min.js"></script>
-    <script src="inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
